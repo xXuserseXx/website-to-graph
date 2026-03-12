@@ -1,5 +1,6 @@
-from crawler.web_crawler import *
+from crawler.web_crawler import run_crawler
+from config import REQUEST_TIMEOUT
 
 
 if __name__ == "__main__":
-    print("Placeholder")
+    run_crawler("https://google.com", REQUEST_TIMEOUT)
