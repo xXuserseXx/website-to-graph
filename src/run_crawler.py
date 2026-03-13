@@ -1,6 +1,11 @@
+from config import MAX_DEPTH, MAX_PAGES, REQUEST_TIMEOUT
 from crawler.web_crawler import run_crawler
-from config import REQUEST_TIMEOUT
 
 
 if __name__ == "__main__":
-    run_crawler("https://proofwiki.org/", REQUEST_TIMEOUT)
+    run_crawler(
+        start_url="https://proofwiki.org/",
+        timeout=REQUEST_TIMEOUT,
+        max_pages=MAX_PAGES,
+        max_depth=MAX_DEPTH,
+    )
