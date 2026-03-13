@@ -2,3 +2,6 @@ Small web crawler/ URL mapping, tool made just for fun.
 
 Crawler starts from a given URL, and looks for all URL, starting with the same base URL
 Currently configured for wikipages only
+
+Long Term Plans:
+- Graph Visualization tool/ system to create clusters in Graphs, to correctly represent webpages by topic
