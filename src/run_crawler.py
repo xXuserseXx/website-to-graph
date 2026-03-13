@@ -3,4 +3,4 @@ from config import REQUEST_TIMEOUT
 
 
 if __name__ == "__main__":
-    run_crawler("https://google.com", REQUEST_TIMEOUT)
+    run_crawler("https://proofwiki.org/", REQUEST_TIMEOUT)

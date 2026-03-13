@@ -1,6 +1,6 @@
 # This handles all the webcalls, and logic (already visited set, calling parser, calling graph builder)
 
-from parsing.html_parser import extract_url
+from parsing.html_parser import extract_urls
 from graphing.create_graph import create_node, add_edge
 import queue
 import requests
@@ -21,12 +21,13 @@ def run_crawler(start_url: str, timeout: int):
                 create_node(current_url)
 
             response = requests.get(current_url, timeout=timeout)
-            urls = extract_url(response.text)
+            urls = extract_urls(response.text, start_url)
 
 
             for url in urls:
                 add_edge(current_url, url)
                 if url not in seen:
+                    print(url)
                     waiting.put(url)
                     seen.add(url)
 
@@ -34,7 +35,7 @@ def run_crawler(start_url: str, timeout: int):
 
         except requests.exceptions.RequestException as e:
             print(f"Request Failes! {e}")
-
+    print(len(visited))
 
 
 
