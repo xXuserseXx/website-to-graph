@@ -20,6 +20,8 @@ def run_crawler(start_url: str, timeout: int, max_pages: int ):
         if current_url in visited:
             continue
 
+        visited.add(current_url)
+
         try:
             response = requests.get(current_url, timeout=timeout)
             response.raise_for_status
