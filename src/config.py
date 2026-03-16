@@ -1,4 +1,4 @@
 MAX_PAGES = 10
 MAX_DEPTH = 3
 REQUEST_TIMEOUT = 10
-OUTPUT_JSON_PATH = "test.json"
+OUTPUT_JSON_PATH = "data/test.json"
